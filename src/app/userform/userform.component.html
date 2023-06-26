@@ -1,0 +1,82 @@
+<div class="container">
+  <div>
+    <!-- <form [formGroup]="registerform"  class="formcss"> -->
+    <div class="list">
+      <div *ngIf="user_detail" class="main_avtar">
+        <div *ngFor="let item of user_detail;let i=index" class="avtar">
+          <img src="{{item.avatar}}" class="imgapi">
+          <label class="list_input">Firstname:</label>
+          <input type="text" value="{{item.first_name}}" class="listlabel">
+          <label class="list_input">Lastname:</label>
+          <input type="text" value="{{item.last_name}}" class="listlabel">
+          <label class="list_input">Email:</label>
+          <input type="email" value="{{item.email}}" class="listlabel">
+          <label class="list_input">Phonenumber:</label>
+          <input type="number" value="{{item.phonenumber}}" class="listlabel">
+          <button (click)="onupdate(item)" class="button1">Update</button>
+          <button (click)="deletedata(i,item.id)" class="button2">Delete</button>
+        </div>
+      </div>
+    </div>
+    <form [formGroup]="registerform" class="formcss">
+      <div class="main">
+        <h1 *ngIf="add">User Register</h1>
+        <h1 *ngIf="up">User Update</h1>
+        <div class="mainform">
+          <div class="mainform1">
+            <label class="lab">first name :</label>
+            <input type="text" placeholder="first name" formControlName="firstname" class="input_main ">
+            <div *ngIf="registerform?.controls?.firstname?.touched">
+              <div *ngIf="registerform?.controls?.firstname?.errors?.required">
+                <p >&nbsp;<i class="fa-solid fa-ban"></i>&nbsp;Firstname is required</p>
+              </div>
+              <div *ngIf="registerform?.controls?.firstname?.errors?.pattern"> 
+                <p>&nbsp;<i class="fa-solid fa-ban"></i>&nbsp;whitespace are not used</p>
+              </div>
+            </div>
+          </div>
+          <div class="mainform2">
+            <label class="lab">Last name :</label>
+            <input type="text" placeholder="last name" formControlName="lastname" class="input_main ">
+            <div *ngIf="registerform?.controls?.lastname?.touched">
+              <div *ngIf="registerform?.controls?.lastname?.errors?.required">
+                <p >&nbsp;<i class="fa-solid fa-ban"></i>&nbsp; Lastname is required</p>
+              </div>
+              <div *ngIf="registerform?.controls?.firstname?.errors?.pattern"> 
+                <p>&nbsp;<i class="fa-solid fa-ban"></i>&nbsp;whitespace are not used</p>
+              </div>
+            </div>
+          </div>
+          <div class="mainform3">
+            <label class="lab">Email :</label>
+            <input type="email" placeholder="abc@gmail.com" formControlName="email" class="input_second ">
+            <div *ngIf="registerform?.controls?.email?.touched">
+              <div *ngIf="registerform?.controls?.email?.errors?.required">
+                <p >&nbsp;<i class="fa-solid fa-ban"></i>&nbsp;Email is required</p>
+              </div>
+              <div *ngIf="registerform?.controls?.email?.errors?.email">
+                <p >&nbsp; Email pattern not verified</p>
+              </div>
+            </div>&nbsp;
+          </div>
+          <div>
+            <label class="lab">phonenumber :</label>
+            <input placeholder="1234567890" formControlName="number" class="input_third">
+          </div>
+          <div *ngIf="updateimg">
+            <label style="font-size: 25px;">Choose img :</label>
+            <input type="file" style="margin-left: 30px;" (change)="readURL($event);">
+            <img id="blah"
+              [src]="imageSrc || 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png'"
+              alt="your image" />
+          </div>
+          <div>
+            <button (click)="postdetail()" class="buttonregister"
+              [disabled]="!registerform.valid || global">Register</button>
+            <button (click)="edituser()" class="buttonupdate">Update</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

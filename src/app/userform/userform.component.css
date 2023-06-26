@@ -1,0 +1,170 @@
+.main {
+    background-color: lightgray;
+    font-size: 20px;
+    width: 50%;
+    margin-left: 400px;
+    border-radius: 30px;
+    box-shadow: 8px 10px gray;
+}
+.main:hover {
+    background-color: gray;
+}
+.input_main {
+    margin-left: 45px;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+.input_second {
+    margin-left: 87px;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+.input_third {
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+h1 {
+    text-align: center;
+}
+
+.button1 {
+    margin: 10px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+.button1:hover {
+    border-radius: 0%;
+    cursor: pointer;
+    transition: 2s;
+    background-color: green;
+}
+.button2 {
+    margin: 10px;
+    color: white;
+    background-color: red;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+.button2:hover {
+    border-radius: 0%;
+    cursor: pointer;
+    transition: 2s;
+    background-color: green;
+}
+
+.mainform {
+    margin-left: 100px;
+    margin-top: 40px;
+}
+.buttonregister {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+}
+.buttonupdate {
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+}
+.buttonupdate:hover {
+    transition: 2s;
+    background-color: red;
+}
+.list {
+    font-size: 20px;
+}
+.list_input {
+    font-size: 25px;
+    margin-top: 50px;
+}
+.listlabel {
+    font-size: 18px;
+    border-radius: 20px;
+    margin-bottom: 11px;
+    border: none;
+    background-color: lightgray;
+}
+.avtar {
+    background-color: lightgray;
+    padding: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 230px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 8px 10px gray;
+}
+.avtar:hover {
+    background-color: gray;
+    width: 250px;
+}
+.main_avtar {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    border-radius: 40px;
+    margin-top: 20px;
+    box-shadow: 8px 10px gray;
+}
+@media only screen and (max-width: 950px) {
+    .main_avtar {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .main {
+        margin-left: 200px;
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .main_avtar {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .main {
+        margin-left: 0px;
+        width: 100%;
+    }
+}
+.mainform1 {
+    display: flex;
+}
+.mainform2 {
+    display: flex;
+}
+.mainform3 {
+    display: flex;
+}
+.lab {
+    margin-top: 10px;
+    font-size: 25px;
+}
+.imgapi {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+#blah {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
+p{
+    color: red;
+}
